@@ -12,10 +12,11 @@ with open("text.txt") as file :
 
     for sentence in list_of_sentences:
         if keyword in sentence:
+            sentence=sentence.strip(" ,!\n")#cleaning sentencing (removing punctuations)
             # Calculate relvance Score
             keyword_count+= sentence.count(keyword)
             curr_keyword_count=sentence.count(keyword)
-            total_words= len(sentence)
+            total_words= len(sentence.split())
             relevanceScore=curr_keyword_count/total_words
 
             # stroing relevance score in dictionary
