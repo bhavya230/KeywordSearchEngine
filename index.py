@@ -16,7 +16,7 @@ with open("text.txt") as file :
             # Calculate relvance Score
             keyword_count+= sentence.count(keyword)
             curr_keyword_count=sentence.count(keyword)
-            total_words= len(sentence.split())
+            total_words= len(sentence.split()) 
             relevanceScore=curr_keyword_count/total_words
 
             # stroing relevance score in dictionary
